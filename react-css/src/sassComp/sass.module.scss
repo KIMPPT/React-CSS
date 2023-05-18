@@ -1,0 +1,18 @@
+//$로 변수와 같이 $이름:적용할 값 으로 그 값을 지정 할 수 있다
+/*&를 통해서 자기자신을 불러와 사용 할 수 있다(예를 들어 &:hover는 css에서 클래스이름이나 태그이름:hover 와 같다)
+class나 태그 안에서 자기자신을 불러와서 사용*/
+$main-color: red;
+
+.color {
+  //아래와 같이 color:red 대신 위에 $로 만든 이름을 넣어주면 된다
+  color: $main-color;
+  //여기서 &는 .color로 보면 된다
+  &:hover {
+    color: yellow;
+  }
+}
+/*
+.color:hover{
+  color:blue;
+}
+*/

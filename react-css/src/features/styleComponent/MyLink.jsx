@@ -7,6 +7,14 @@ let StyleLink = styled(Link)`
   font-weight: bold;
   color: #ff7c0a;
   text-decoration: none;
+  //자신의 태그에 hover되었을 때
+  &:hover {
+    color: blue;
+  }
+  //자신 다음 태그의 CSS
+  & + div {
+    background-color: yellowgreen;
+  }
 `;
 export default function MyLink({ children, ...rest }) {
   return <StyleLink {...rest}>MyLink</StyleLink>;
