@@ -1,5 +1,5 @@
 import React from "react";
-import './counter.module.css'
+//import './counter.module.css'
 import styles from './counter.module.css'
 export default function CounterComp() {
   return (

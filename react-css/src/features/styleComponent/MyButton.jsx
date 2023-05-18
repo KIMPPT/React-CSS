@@ -12,6 +12,8 @@ let MyButton = styled.a`
     color: blue;
   }
 `;
+
 export default function myButton({ children, ...rest }) {
+  console.log(rest)
   return <MyButton {...rest}>{children}</MyButton>;
 }
