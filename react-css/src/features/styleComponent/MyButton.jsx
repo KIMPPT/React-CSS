@@ -7,7 +7,10 @@ onClick 이벤트를 이용해서 alert창을 출력하세요
 let MyButton = styled.a`
   color: ${(props) => props.color};
   padding: ${(props) => props.padding};
-  background-color: ${(props)=>props.bgC};
+  background-color: ${(props) => props.bgC};
+  &:hover {
+    color: blue;
+  }
 `;
 export default function myButton({ children, ...rest }) {
   return <MyButton {...rest}>{children}</MyButton>;

@@ -27,7 +27,12 @@ function App() {
       >
         버튼
       </StyleButton>
-      <MyButton color="red" padding="5px" bgC="rgba(0,255,0,0.5)" onClick={()=>alert("클릭하였습니다")}>
+      <MyButton
+        color="red"
+        padding="5px"
+        bgC="rgba(0,255,0,0.5)"
+        onClick={() => alert("클릭하였습니다")}
+      >
         A태그
       </MyButton>
     </div>
