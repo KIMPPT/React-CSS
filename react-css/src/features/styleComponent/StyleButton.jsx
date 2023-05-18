@@ -5,8 +5,14 @@ let Button = styled.a`
   color: ${(props) => props.color};
   background-color: ${(props) => props.bgcolor};
   /*font-size 크기를 받아와서 그 크기대로 출력 */
-  font-size: ${(props) => props.fontsize};
+  font-size: ${(props) => props.fsize};
 `;
+
+//styled에 태그 대신 미리 짜놓은 태그를 넣어서 그 중 일부만 수정해서도 쓸 수 있다
+let TomatoButton=styled(Button)`
+  color:tomato;
+  font-size:3rem;
+`
 //...rest는 나머지 연산자로 남은 매개변수의 값들을 배열/객체로 들고온다
 export default function StyleButton({ children, ...rest }) {
   //console.log(children);
@@ -17,6 +23,7 @@ export default function StyleButton({ children, ...rest }) {
     <div>
       {/*아래 ...은 스프레드 연산자로 안의 값을 풀어서 씀 */}
       <Button {...rest}>{children}</Button>
+      <TomatoButton>{children}</TomatoButton>
     </div>
   );
 }

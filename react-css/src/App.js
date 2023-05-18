@@ -4,6 +4,8 @@ import InputForm from "./features/inputform/InputForm";
 import StyleComp from "./features/styleComponent/StyleComp";
 import StyleButton from "./features/styleComponent/StyleButton";
 import MyButton from "./features/styleComponent/MyButton";
+import CommonButton from "./features/styleComponent/CommonButton";
+import SpecialButton from "./features/styleComponent/SpecialButton";
 function App() {
   return (
     <div className="App">
@@ -19,7 +21,7 @@ function App() {
       <StyleButton
         color="red"
         bgcolor="pink"
-        fontsize="1rem"
+        fsize="1rem"
         onClick={(e) => {
           e.preventDefault();
           console.log("이벤트");
@@ -30,11 +32,13 @@ function App() {
       <MyButton
         color="red"
         padding="5px"
-        bgC="rgba(0,255,0,0.5)"
+        bgc="rgba(0,255,0,0.5)"
         onClick={() => alert("클릭하였습니다")}
       >
         A태그
       </MyButton>
+      <CommonButton color="blue"></CommonButton>
+      <SpecialButton></SpecialButton>
     </div>
   );
 }
