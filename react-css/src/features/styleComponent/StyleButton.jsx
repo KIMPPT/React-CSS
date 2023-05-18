@@ -9,9 +9,9 @@ let Button = styled.a`
 `;
 //...rest는 나머지 연산자로 남은 매개변수의 값들을 배열/객체로 들고온다
 export default function StyleButton({ children, ...rest }) {
-  console.log(children);
+  //console.log(children);
   //console.log에서 볼 때는 ...을 빼고 쳐야 한다
-  console.log(rest);
+  //console.log(rest);
   //위의 props는 rest가 되어서 props.color는 rest.color 즉, rest 객체 중 color의 값을 들고온다
   return (
     <div>
